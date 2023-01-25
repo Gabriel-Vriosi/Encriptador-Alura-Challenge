@@ -1,0 +1,399 @@
+:root{
+    /*pallette*/
+    --white: #ffffff;
+    --black: #000000;
+    --red: #f52d2d;
+    --light-blue-100: #F3F5FC;
+    --light-blue-200: #EFF1FA;
+    --light-blue-300: #E9ECF8;
+    --light-blue-400: #AAB2D5;
+    --light-blue-500: #757FB2;
+    --dark-blue-100: #609ED4;
+    --dark-blue-200: #356EA9;
+    --dark-blue-300: #0A3871;
+    --dark-blue-400: #072B61;
+    --dark-blue-500: #052051;
+    --gray-100: #CED4DA;
+    --gray-200: #ADB5BD;
+    --gray-300: #868E96;
+    --gray-400: #495057;
+    --gray-500: #343A40;
+}
+
+
+* {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    min-width: fit-content;
+}
+
+body{
+    
+    min-height: 115vh;
+    min-width: fit-content;
+    zoom: 90%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+    background: linear-gradient(135deg, var(--light-blue-400), var(--white) 70%);
+
+    animation: entrace 2s ease 1;
+}
+
+header{
+    height: fit-content;
+    width: fit-content;
+}
+
+.logo{
+    display: flex;
+
+    width: fit-content;
+    height: fit-content;
+    margin: 20px 0;
+}
+
+main{
+    width: 100%;
+
+    padding: 60px;
+    gap: 25px;
+
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: space-between;
+}
+
+/* -----------------------left side-----------------------*/
+
+
+#left-screen{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+#input-text{
+    display: flex;
+
+    width: 100%;
+    height: 70%;
+    max-height: 70%;
+    resize: none;
+    
+    outline: none;
+    border-style: none;
+    border-radius: 32px;
+    padding: 10px 15px;
+    
+    background: none;
+    
+    font-size: 32px;
+    text-align: left;
+    color: var(--dark-blue-400);
+
+    transition: all 0.1s ease;
+}
+
+#input-text::placeholder{
+    color: var(--dark-blue-200);
+}
+
+#input-text::-webkit-scrollbar{
+    visibility: hidden;
+}
+
+#input-text:focus {
+    outline: 2px solid #082d5a;
+}
+
+.frame{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#frame-1{
+    width: fit-content;
+    height: fit-content;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#frame-1 span{
+    width: 18px;
+    height: 18px;
+    
+    border-radius: 50%;
+
+    background-color: var(--gray-400);
+
+    color: var(--white);
+    opacity: 0.8;
+
+}
+
+#frame-1 p{
+    font-size: 18px;
+    text-align: left;
+    color: var(--gray-400);
+    opacity: 0.8;
+}
+
+.buttN{
+    width: 300px;
+    height: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--dark-blue-300);
+    box-shadow: 20px 13px 5px 1px #1111112b;
+
+    color: var(--white);
+    border-radius: 24px;
+}
+
+#frame-3{
+    justify-content: space-between;
+    gap: 24px;
+}
+
+#frame-3-button-1:hover{
+    background-color: var(--dark-blue-500);
+}
+
+#frame-3-button-2{
+    border: 1px solid var(--dark-blue-300);
+    background-color: transparent;
+    color: var(--black);
+}
+
+#frame-3-button-2:hover{
+    background-color: var(--light-blue-200);
+}
+
+
+/* -----------------------right side-----------------------*/
+
+
+.rectangle-1{
+    width: 400px;
+    height: 100%;
+    min-height: 524px;
+    padding: 32px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 32px;
+    
+    box-sizing: border-box;
+    box-shadow: 20px 13px 5px 1px #1111112b;
+
+    background: var(--white);
+}
+
+.imagen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 336px;
+    height: 304px;
+}
+
+
+#frame-5{
+    width: 336px;
+    height: 122px;
+    gap: 16px;
+    margin-top: 10%;
+    
+    flex-direction: column;
+}
+
+#frame-5 h1{
+    width: 100%;
+
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--gray-500);
+}
+
+#frame-5 h2{
+    width: 100%;
+    
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--gray-400);
+}
+
+#new-text{
+    width: 100%;
+    height: 80%;
+    
+    text-align: left;
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--gray-400);
+
+    resize: none;
+    outline: none;
+    border: none;
+    
+    display: none;
+    background-color: transparent;
+}
+
+#new-text::-webkit-scrollbar{
+    display: none;
+}
+
+#copy{
+    display: none;
+    justify-content: center;
+
+    background-color: transparent;
+
+    color: var(--black);
+
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+
+    animation: entrace 2s ease 1;
+}
+
+#copy:hover{
+    
+    background-color: #e9ecfc;
+    
+}
+
+#copy section{
+    
+    margin: auto 0;
+    font-weight: 400;
+    font-size: 16px;
+    
+    color: #0A3871;
+}
+
+
+/* -------------------------------------------------------------------- */
+
+
+footer {
+
+    height: 150px;
+
+    display: block;
+    background-color: black;
+}
+
+
+/* -----------------------animations-----------------------*/
+
+
+@keyframes entrace {
+    from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+}
+
+
+/* -------------------------------------------------------------------- */
+
+/* pantalla tipo tablets */
+
+@media only screen and (max-width: 768px) {
+
+    html{
+        min-width: 100%;
+    }
+
+    body{
+        min-width: 100%;
+    }
+
+    main{
+        min-height: 120vh;
+        padding: 40px;
+        flex-direction: column;
+    }
+
+    #left-screen{
+        height: fit-content;
+        flex: 1 1 auto;
+        gap: 20px;
+        justify-content: unset;
+    }
+
+    #input-text{
+        min-height: 35vh;
+    }
+
+    #frame-3{
+        justify-content: space-evenly;
+    }
+
+    #right-screen{
+        height: 50%;
+        display: flex;
+        flex: 1 1 auto;
+    }
+
+    .rectangle-1{
+        width: 100%;
+        height: auto;
+        justify-content: space-evenly;
+    }
+}
+/* -------------------------------------------------------------------- */
+
+/* pantalla tipo celular */
+
+@media only screen and (max-width: 480px) {
+
+    #frame-3{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .buttN{
+        width: 100%;
+        font-size: 20px;
+    }
+
+    #muñeco{
+        display: none;
+    }
+
+    #frame-5{
+        width: auto;
+        height: auto;
+        margin: 0;
+        gap: 25px;
+    }
+}

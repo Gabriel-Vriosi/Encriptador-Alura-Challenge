@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+    
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Encriptador </title>
+        <link rel="shortcut icon" href="images/favicon.ico">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style_encriptador.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&display=swap">
+        <script src="encriptador.js" type="text/javascript"></script>
+
+    </head>
+
+    <body>
+
+        <header>
+
+            <section class="logo">
+                <img src="images/Logo.png">
+            </section>
+
+        </header>
+        
+        
+        <main>
+
+            <section id="left-screen">
+
+                <textarea id="input-text" placeholder="Ingrese texto aquí" wrap="hard" autocapitalize="none"></textarea>
+                        
+
+                <section>
+                    <section id="frame-1" class="frame">
+
+                        <span>!</span>
+                        <p>Solo letras minúsculas, sin acentos y sin caracteres especiales</p> 
+    
+                    </section>
+    
+    
+                    <section id="frame-3" class="frame">
+        
+                        <button id="frame-3-button-1" type="button" class="buttN">Encriptar</button>
+                        <button id="frame-3-button-2" type="button" class="buttN">Desencriptar</button>
+        
+                    </section>
+                </section>
+ 
+            </section>
+                
+
+            <section id="right-screen">
+
+                <section class="rectangle-1">
+
+                    <img id="muñeco" src="images/Muñeco.png">
+    
+                    <section id="frame-5" class="frame">
+    
+                        <h1>Ningún mensaje fue encontrado</h1>
+                        <h2>Ingresa el texto que desees encriptar o desencriptar.</h2>
+                        
+                    </section>
+                    
+                    <textarea id="new-text" readonly="true"></textarea>
+                    <button id="copy" class="buttN">Copiar</button>
+    
+                </section>
+
+            </section>
+
+        </main>
+
+        
+        <footer>
+
+        </footer>
+
+    </body>
+
+</html>
