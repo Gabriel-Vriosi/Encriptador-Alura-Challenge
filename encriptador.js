@@ -197,12 +197,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Copia el texto ubicado en el area donde se muestra el mensaje final
     function copy_text() {
-        var copied_text = document.querySelector("#new-text").value
-        if (copied_text != "") {
+        var copied_text = document.querySelector("#new-text");
+
+        if (copied_text != "" && navigator.clipboard) {
             
-            navigator.clipboard.writeText(copied_text);
-            return true
-        }        
+            navigator.clipboard.writeText(copied_text.value);
+            alert("Copied! 1")
+
+        } else {
+            copied_text.select();
+            document.execCommand("copy");
+            alert("Copied! 2")
+        } 
+        //other browsers
+        window.getSelection().removeAllRanges()
+        //firefox
+        document.selection.empty()
     }
 
 //************************************************************************************************************* */
