@@ -197,22 +197,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Copia el texto ubicado en el area donde se muestra el mensaje final
     function copy_text() {
-        var copied_text = document.querySelector("#new-text");
+        var copied_text = document.querySelector("#new-text").value;
 
         if (copied_text != "" && navigator.clipboard) {
             
-            navigator.clipboard.writeText(copied_text.value);
-            alert("Copied! 1")
-
-        } else {
-            copied_text.select();
-            document.execCommand("copy");
-            alert("Copied! 2")
-        } 
-        //other browsers
-        window.getSelection().removeAllRanges()
-        //firefox
-        document.selection.empty()
+            navigator.clipboard.writeText(copied_text);
+            alert("Copied!")
+        } else{
+            alert("error, try copying manually")
+        }
     }
 
 //************************************************************************************************************* */
@@ -248,7 +241,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelector("#copy").addEventListener("click", click =>{
         if (copy_text()) {
-            alert("Copied!")
         }
     });
 
