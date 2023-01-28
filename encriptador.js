@@ -201,15 +201,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (copied_text = document.querySelector("#new-text").value != "") {
             
             navigator.clipboard.writeText(copied_text);
-            // copied_text.replace(/<br>/g, "\n");
-            
-            // copied_text.select();
-            // copied_text.setSelectionRange(0, 99999);
-            // copied_text.setSelectionRange(0,0)
         }
-        setTimeout(function() {
-            alert("Copied!")
-        }, 100);
+        // setTimeout(function() {
+        //     alert("Copied!")
+        // }, 100);
         
     }
 
