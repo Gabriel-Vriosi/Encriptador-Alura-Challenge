@@ -240,8 +240,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.querySelector("#copy").addEventListener("click", click =>{
-        if (copy_text()) {
-        }
+        copy_text(); 
     });
 
 //************************************************************************************************************* */
