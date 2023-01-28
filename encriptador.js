@@ -5,12 +5,12 @@ document.addEventListener('DOMContentLoaded', () => {
     //Checkea que los caracteres sean validos, de lo contrario retorna false.
     function check_characters(key, type = "single") {
 
-        pattern = /^[a-z\r\n\s]+$/
+        pattern = /^[a-zñ\r\n\s]+$/
 
         if (type == "single"){
 
             exeptions = [8, 9, 13, 16, 17, 18, 20, 27, 32, 33, 34, 35, 36, 45, 46, 91, 92, 93, 112, 113, 114,
-            115, 116, 117, 118, 119, 120, 121, 122, 123, 192]
+            115, 116, 117, 118, 119, 120, 121, 122, 123]
 
             if (pattern.test(key.key) || exeptions.includes(key.keyCode) || key.code == "") {
 
@@ -197,15 +197,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Copia el texto ubicado en el area donde se muestra el mensaje final
     function copy_text() {
+        copied_text = document.querySelector("#new-text").value
 
-        if (copied_text = document.querySelector("#new-text").value != "") {
+        if (copied_text != "") {
             
             navigator.clipboard.writeText(copied_text);
-        }
-        // setTimeout(function() {
-        //     alert("Copied!")
-        // }, 100);
-        
+            return true
+        }        
     }
 
 //************************************************************************************************************* */
@@ -240,7 +238,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.querySelector("#copy").addEventListener("click", click =>{
-        copy_text()
+        if (copy_text()) {
+            alert("Copied!")
+        }
     });
 
 //************************************************************************************************************* */
