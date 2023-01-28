@@ -202,14 +202,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if (copied_text.value != "") {
             
             copied_text = copied_text.value
-            copied_text.replace(/<br>/g, "\n");
+            navigator.clipboard.writeText(copied_text);
+            // copied_text.replace(/<br>/g, "\n");
 
             // copied_text.select();
             // copied_text.setSelectionRange(0, 99999);
-            navigator.clipboard.writeText(copied_text);
             // copied_text.setSelectionRange(0,0)
-            alert("Copied!")
         }
+        alert("Copied!")
     }
 
 //************************************************************************************************************* */
