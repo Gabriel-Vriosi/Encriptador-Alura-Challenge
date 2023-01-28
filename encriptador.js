@@ -197,8 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Copia el texto ubicado en el area donde se muestra el mensaje final
     function copy_text() {
-        copied_text = document.querySelector("#new-text").value
-
+        var copied_text = document.querySelector("#new-text").value
         if (copied_text != "") {
             
             navigator.clipboard.writeText(copied_text);
